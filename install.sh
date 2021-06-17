@@ -28,8 +28,8 @@ remve(){
 }
 perms(){
     chown -R root:wheel /Applications/ScreenTime.app >/dev/null
-    osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/ScreenTime.app", hidden:false}' >/dev/null
-    open x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility && open /System/Library/CoreServices/ && open /Applications/ >/dev/null
+    osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/ScreenTime.app", hidden:false}'
+    open x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility && open /System/Library/CoreServices/ && open /Applications/
 }
 setin(){
     clear
@@ -48,6 +48,7 @@ setin(){
         remve
         printf "\n$GRN ### Change Settings 👍 $NC\n"
         perms
+        printf "\n$GRN ### Done 👍 $NC\n"
         printf "\n$GRN ### Done 👍 $NC\n"
         exit
     fi
